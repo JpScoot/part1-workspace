@@ -6,20 +6,30 @@ public class TelevisionClient {
     //create instances(objects) of Television class getters and setters
     Television tv1 = new Television();
     tv1.setBrand("Samsung");
-    tv1.setVolume(20);
-
-    Television tv2 = new Television();
-    tv2.setBrand("Sony");
-    tv2.setVolume(50);
+    tv1.setVolume(120);
 
     tv1.turnOn();
     tv1.turnOff();
 
+    System.out.println(tv1);
+
+    System.out.printf("%d television instances created%n", Television.getInstanceCount());
+
+    Television tv2 = new Television("Sony", 89);
+
+    //tv2.setBrand("Sony");
+    //tv2.setVolume(50);
+
     tv2.turnOn();
     tv2.turnOff();
 
-    System.out.println(tv1.toString());
-    System.out.println(tv1);
+    System.out.println(tv2);
+    System.out.printf("%d television instances created%n", Television.getInstanceCount());
+
+
+
+    System.out.println(new Television("LG"));
+    System.out.printf("%d television instances created%n", Television.getInstanceCount());
   }
 
 }
