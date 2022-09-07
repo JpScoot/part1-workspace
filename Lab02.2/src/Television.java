@@ -49,7 +49,17 @@ public class Television {
 
   //Accessor Methods
   public void setBrand(String brand) {
-    this.brand = brand;
+
+    switch (brand) {
+      case"Samsung":
+      case"LG":
+      case"Sony":
+      case"Toshiba":
+        this.brand = brand;
+        break;
+      default:
+        System.out.printf("");;
+    }
   }
 
   public int getVolume() {
