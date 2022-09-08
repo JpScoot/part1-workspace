@@ -9,6 +9,12 @@ public class Television {
   private String brand;
   private int volume;
 
+
+//invoke constructor method
+  private DisplayType display = DisplayType.LED;
+
+
+
   //constructor method (no arguments)
   public Television() {
     instanceCount++;
@@ -19,12 +25,22 @@ public class Television {
     setBrand(brand);
   }
 
-  //constructor invokes String brand constructor
+
   public Television(String brand, int volume) {
     this(brand);
     setVolume(volume);
 
   }
+
+  public Television(String brand, int volume, DisplayType display){
+    this(brand, volume);
+    setDisplay(display);
+
+  }
+
+
+
+
 
 
   //write business methods
@@ -43,11 +59,12 @@ public class Television {
   public static int getInstanceCount(){
     return instanceCount;
   }
+
+  //access methods getter and setters
   public String getBrand() {
     return brand;
   }
 
-  //Accessor Methods
   public void setBrand(String brand) {
 
     switch (brand) {
@@ -74,6 +91,15 @@ public class Television {
     }
   }
 
+  public DisplayType getDisplay() {
+    return display;
+  }
+
+  public void setDisplay(DisplayType display) {
+    this.display = display;
+  }
+
+
   //helper method always private
   private boolean verifyInternetConnection() {
     return true;
@@ -84,7 +110,7 @@ public class Television {
   public String toString() {
     return "Television{" +
         "brand='" + brand + '\'' +
-        ", volume=" + volume +
+        ", volume=" + volume + ", display type=" + display +
         '}';
   }
 }
