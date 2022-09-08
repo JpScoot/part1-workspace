@@ -58,7 +58,7 @@ public class Television {
         this.brand = brand;
         break;
       default:
-        System.out.printf("");;
+        System.out.printf("%s is not a valid brand; only Samsung, LG, Sony, and Toshiba are allowed.%n", brand);
     }
   }
 
