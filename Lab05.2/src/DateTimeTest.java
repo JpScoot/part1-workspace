@@ -17,13 +17,15 @@ import java.time.format.*;
 
 class DateTimeTest {
 
+
+
     /**
      * main() calls each of the test methods in turn (currently commented out).
      * To run one test method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // testNow();
-        // testCreate();
+         testNow();
+         testCreate();
         // testParse();
         // testFormat();
     }
@@ -33,6 +35,14 @@ class DateTimeTest {
      */
     public static void testNow() {
         // TODO
+        LocalDateTime dateTime = LocalDateTime.now();
+        System.out.println(dateTime);
+
+        LocalDate date = LocalDate.now();
+        System.out.println(date);
+
+        LocalTime time = LocalTime.now();
+        System.out.println(time);
     }
 
     /**
@@ -41,8 +51,16 @@ class DateTimeTest {
     public static void testCreate() {
         // TODO: create your birthday via of(). What day of the week were you born on?
 
+        LocalDate bday = LocalDate.of(1985, 2, 18);
+        System.out.println(bday);
+
+        DayOfWeek day = DayOfWeek.FRIDAY;
+        System.out.println(day);
+
         // TODO: use of() to create a value representing the 1st lunar landing - it happened on 7/20/69 at 3:18pm Eastern Time.
         // NOTE: ignore time-zone, just assume Eastern Time is the local time.
+
+
     }
 
     /**

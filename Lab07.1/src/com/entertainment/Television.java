@@ -11,42 +11,33 @@ public class Television {
   private String brand;
   private int volume;
 
-
-//invoke constructor method
+  //invoke constructor method
   private DisplayType display = DisplayType.LED;
-
-
 
   //constructor method (no arguments)
   public Television() {
     instanceCount++;
   }
+
   //constructor calls setter
   public Television(String brand) {
     this();
     setBrand(brand);
   }
 
-
   public Television(String brand, int volume) {
     this(brand);
     setVolume(volume);
-
   }
 
-  public Television(String brand, int volume, DisplayType display){
+  public Television(String brand, int volume, DisplayType display) {
     this(brand, volume);
     setDisplay(display);
 
   }
 
-
-
-
-
-
   //write business methods
-//public modifiers
+  //public modifiers
   public void turnOn() {
     //boolean variable = (assign a value)
     boolean isConnected = verifyInternetConnection();
@@ -58,7 +49,7 @@ public class Television {
     System.out.println("The " + brand + " television is off! ");
   }
 
-  public static int getInstanceCount(){
+  public static int getInstanceCount() {
     return instanceCount;
   }
 
@@ -70,14 +61,15 @@ public class Television {
   public void setBrand(String brand) {
 
     switch (brand) {
-      case"Samsung":
-      case"LG":
-      case"Sony":
-      case"Toshiba":
+      case "Samsung":
+      case "LG":
+      case "Sony":
+      case "Toshiba":
         this.brand = brand;
         break;
       default:
-        System.out.printf("%s is not a valid brand; only Samsung, LG, Sony, and Toshiba are allowed.%n", brand);
+        System.out.printf(
+            "%s is not a valid brand; only Samsung, LG, Sony, and Toshiba are allowed.%n", brand);
     }
   }
 
@@ -86,8 +78,9 @@ public class Television {
   }
 
   public void setVolume(int volume) {
-    if (volume < MIN_VOLUME || volume > MAX_VOLUME){
-      System.out.printf("%d is invalid; volume must be between %d and %d (inclusive).%n",volume, MIN_VOLUME, MAX_VOLUME);
+    if (volume < MIN_VOLUME || volume > MAX_VOLUME) {
+      System.out.printf("%d is invalid; volume must be between %d and %d (inclusive).%n", volume,
+          MIN_VOLUME, MAX_VOLUME);
     } else {
       this.volume = volume;
     }

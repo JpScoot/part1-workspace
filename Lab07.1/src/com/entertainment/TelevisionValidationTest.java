@@ -35,17 +35,7 @@ public class TelevisionValidationTest {
     System.out.println(tv1.getVolume());
 
 
-
-
-
-
-
-
-
-
   }
-
-
 
 
 }
