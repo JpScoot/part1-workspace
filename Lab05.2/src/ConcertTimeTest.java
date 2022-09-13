@@ -12,8 +12,8 @@ import java.time.*;
 class ConcertTimeTest {
 
     public static void main(String[] args) {
-         listAvailableZoneIds();
-        // testLiveConcert();
+         //listAvailableZoneIds();
+         testLiveConcert();
     }
 
     /*
@@ -38,5 +38,9 @@ class ConcertTimeTest {
      */
     public static void testLiveConcert() {
         // TODO
+        ZonedDateTime ca = ZonedDateTime.of(LocalDateTime.of(2020, 7, 18, 7, 0, 0),
+            ZoneId.of("Canada/Pacific"));
+
+        ZonedDateTime perth = ca.withZoneSameInstant(ZoneId.of("Australia/Perth"));
     }
 }
