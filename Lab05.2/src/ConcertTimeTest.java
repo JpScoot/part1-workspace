@@ -42,5 +42,6 @@ class ConcertTimeTest {
             ZoneId.of("Canada/Pacific"));
 
         ZonedDateTime perth = ca.withZoneSameInstant(ZoneId.of("Australia/Perth"));
+        System.out.println(perth);
     }
 }
