@@ -24,6 +24,11 @@ public class HourlyEmployee extends Employee {
     setHours(hours);
   }
 
+  //business methods
+  public void pay(){
+    System.out.printf("%s is paid hourly, for a total of %,.2f%n", getName(), getHours() * getRate());
+  }
+
   //accessor methods
   public double getRate() {
     return rate;

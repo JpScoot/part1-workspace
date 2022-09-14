@@ -16,6 +16,11 @@ public class SalariedEmployee extends Employee {
     setSalary(salary);
   }
 
+  //business method
+  public void pay(){
+    System.out.printf("%s is paid a salary of %,.2f%n", getName(),getSalary());
+  }
+
   //getter and setter methods
   public double getSalary() {
     return salary;
@@ -28,6 +33,7 @@ public class SalariedEmployee extends Employee {
 
   @Override
   public String toString() {
-    return String.format("%s, salary=%,.2f%",super.toString(),getSalary());
+    return super.toString() + ", salary=" + getSalary();
+    //return String.format("%s, salary=%,.2f%",super.toString(),getSalary());
   }
 }
