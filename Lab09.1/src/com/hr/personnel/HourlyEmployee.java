@@ -19,7 +19,7 @@ public class HourlyEmployee extends Employee implements TaxPayer {
     super(name, hireDate);
   }
 
-  public HourlyEmployee(String name, LocalDate hireDate, double rate, double hours) {
+  public HourlyEmployee(String name, LocalDate hireDate, double rate, double hours) throws IllegalArgumentException {
     this(name, hireDate);
     setRate(rate);
     setHours(hours);
@@ -35,8 +35,8 @@ public class HourlyEmployee extends Employee implements TaxPayer {
     return rate;
   }
 
-  public void setRate(double rate) {
-    this.rate = rate;
+  public void setRate(double rate)  {
+      this.rate = rate;
   }
 
   public double getHours() {
